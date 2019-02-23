@@ -1,5 +1,5 @@
 # Energized-ID
-Everything that will go into the creation of the id software
+Open source web based ID badge software  
 
 Inspiration for this: Energy Institute High School needs new ID software as the current software is slow and slightly limiting (due to purchase of least expensive edition)
 
