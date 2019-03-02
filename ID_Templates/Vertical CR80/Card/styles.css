@@ -1,19 +1,22 @@
 body {
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   margin: 0;
 }
+
 @media only screen {
   body {
-    background-color: antiquewhite;
+    background-color: #f0f0f0;
   }
 }
 
 .page {
   width: 2.125in;
   height: 3.375in;
+  display: -ms-grid;
   display: grid;
   background-color: white;
 }
+
 @media only screen {
   .page {
     border-radius: 9px;
@@ -29,10 +32,13 @@ div {
 }
 
 #one {
-  grid-template-rows: 0.375in 0.375in 0.0625in 0.5625in 0.75in 0.0625in 0.125in 0.21875in 0.125in 0.15625in 0.25in 0.0625in 0.0625in;
-  grid-template-columns: 1.0625in 1.0625in;
-  grid-template-areas: "u2t6lhq u2t6lhg" "header header" "u2t6lig u2t6lhx" "photo energy" "photo qr" "u2t6ljm u2t6lip" "title title" "name name" "id id" "grade grade" "moto moto" "u2t6lkb u2t6ljv" "expires expires";
+  -ms-grid-rows: 0.375in 0.375in 0.0625in 0.5625in 0.75in 0.0625in 0.125in 0.21875in 0.125in 0.15625in 0.25in 0.0625in 0.0625in;
+      grid-template-rows: 0.375in 0.375in 0.0625in 0.5625in 0.75in 0.0625in 0.125in 0.21875in 0.125in 0.15625in 0.25in 0.0625in 0.0625in;
+  -ms-grid-columns: 1.0625in 1.0625in;
+      grid-template-columns: 1.0625in 1.0625in;
+      grid-template-areas: "ub82e91c4 ua44672d9" "header header" "ue77a3570 ua69f8be0" "photo energy" "photo qr" "u6dcdaadd ub0f1fbad" "title title" "name name" "id id" "grade grade" "moto moto" "u4d9d217b u608d3a99" "expires expires";
 }
+
 @media only screen {
   #one {
     position: fixed;
@@ -42,71 +48,102 @@ div {
 }
 
 #header {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: header;
   font-size: 0.21875in;
   background-color: #8d5b2e;
   color: white;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   padding: 5px;
 }
 
 #photo {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
   grid-area: photo;
   max-width: 1.0625in;
   max-height: 1.3125in;
 }
 
 #energy {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
   grid-area: energy;
   max-width: 1.0625in;
   max-height: 0.5625in;
 }
 
 #qr {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
   grid-area: qr;
   max-width: 1.0625in;
   max-height: 0.75in;
 }
 
 #title {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: title;
   font-size: 0.09375in;
 }
 
 #name {
+  -ms-grid-row: 8;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: name;
   font-size: 0.15625in;
   font-weight: bold;
 }
 
 #id {
+  -ms-grid-row: 9;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: id;
   font-size: 0.09375in;
 }
 
 #grade {
+  -ms-grid-row: 10;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: grade;
   font-size: 0.09375in;
 }
 
 #moto {
+  -ms-grid-row: 11;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: moto;
-  font-size: 0.171875in;
+  font-size: 0.17188in;
   background-color: #8d5b2e;
   color: white;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 #expires {
+  -ms-grid-row: 13;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: expires;
   font-size: 0.09375in;
 }
 
 #two {
-  grid-template-rows: 0.375in 1in 1.25in 0.75in;
-  grid-template-columns: 2.125in;
-  grid-template-areas: "u2t6lla" "energy2" "addrz" "barcode";
+  -ms-grid-rows: 0.375in 1in 1.25in 0.75in;
+      grid-template-rows: 0.375in 1in 1.25in 0.75in;
+  -ms-grid-columns: 2.125in;
+      grid-template-columns: 2.125in;
+      grid-template-areas: "u134e4bbf" "energy2" "addrz" "barcode";
 }
+
 @media only screen {
   #two {
     position: fixed;
@@ -116,22 +153,27 @@ div {
 }
 
 #energy2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: energy2;
   max-width: 2.125in;
   max-height: 1in;
 }
 
 #addrz {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: addrz;
   padding-top: 0.0625in;
   font-size: 0.09375in;
 }
 
 #barcode {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
   grid-area: barcode;
   max-width: 1.59375in;
   max-height: 0.75in;
   margin-top: 9.25px;
 }
-
 /*# sourceMappingURL=styles.css.map */
